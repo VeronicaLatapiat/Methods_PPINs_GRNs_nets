@@ -4,33 +4,37 @@
 
 ### Gene Regulatory Networks (GRNs)
 
-Gene Regulatory Networks (GRNs) are complex networks that depict the regulatory relationships between genes and the proteins they encode. These networks illustrate how genes interact with each other and with various molecular signals to control gene expression. In a GRN, nodes represent genes, while edges indicate regulatory interactions, such as activation or repression. Understanding GRNs is crucial for elucidating the mechanisms of cellular processes, development, and responses to environmental changes, as they play a significant role in determining the behavior of biological systems.
+Gene Regulatory Networks (GRNs) are complex networks that depict the regulatory relationships between genes and the proteins they encode. These networks illustrate how genes interact with each other and with various molecular signals to control gene expression. In a GRN, nodes represent genes, while edges indicate regulatory interactions, such as activation or repression.
 
 ### Protein-Protein Networks (PPNs)
 
-Protein-Protein Networks (PPNs) focus on the interactions between proteins within a cell. These networks are essential for understanding cellular functions, as proteins often work together in complexes to perform biological tasks. In a PPN, nodes represent proteins, and edges denote physical or functional interactions between them. Analyzing PPNs helps researchers identify key protein interactions that contribute to various cellular processes, including signaling pathways, metabolic processes, and disease mechanisms. By studying these networks, scientists can uncover insights into how proteins collaborate to maintain cellular homeostasis and how disruptions in these interactions can lead to diseases such as cancer and neurodegenerative disorders.
+Protein-Protein Networks (PPNs) focus on the interactions between proteins within a cell. These networks are essential for understanding cellular functions, as proteins often work together in complexes to perform biological tasks. In a PPN, nodes represent proteins, and edges denote physical or functional interactions between them. Analyzing PPNs helps researchers identify key protein interactions contributing to various cellular processes, including signaling pathways, metabolic processes, and disease mechanisms.
 
-Together, GRNs and PPNs provide a comprehensive framework for understanding the intricate web of interactions that govern cellular behavior and contribute to the complexity of biological systems.
+GRNs.py
 
-Nuevo_GRNs_carriers_enfermos_CHIsquare.py
 Overview
-The Nuevo_GRNs_carriers_enfermos_CHIsquare.py script is designed for analyzing protein-protein associations in a dataset of carriers and non-carriers of a specific condition. It employs statistical methods, including bootstrap sampling and chi-square tests, to identify significant associations between proteins in patients categorized as "enfermos" (sick) and "sanos" (healthy).
+GRNs.py script is designed for analyzing protein-protein associations in a dataset of NCI, AD, carriers and non-carriers of allele 4 of ApoE gene. It employs statistical methods, including bootstrap sampling to identify significant associations between proteins in patients.
+
 Dependencies
 This script requires the following Python libraries:
 pandas
 numpy
 scipy
 statsmodels
+
 Make sure to install these libraries before running the script.
+
 Input Data
+
 The script reads data from CSV files. The main input file is:
-valores_concatenados_apoe_carriers.csv: Contains protein association data for sick carriers.
-Additionally, it utilizes another CSV file for healthy individuals:
-df_frecuencias_iteraciones-bootstrap_non-carriers.csv: Contains protein association data for healthy non-carriers.
+valores_concatenados_apoe_carriers.csv: Contains protein association data for carriers.
+Additionally, it utilizes another CSV file for AD individuals:
+df_frecuencias_iteraciones-bootstrap_non-carriers.csv: Contains protein association data for non-carriers.
+
 Script Workflow
-Data Loading: The script begins by loading the CSV file containing the data for sick carriers into a pandas DataFrame.
-Association Extraction:
-It extracts all unique protein-protein associations from the DataFrame.
+
+Data Loading: The script begins by loading the CSV file containing the data for carriers into a pandas DataFrame.
+Association Extraction: It extracts all unique protein-protein associations from the DataFrame.
 A new DataFrame is created to indicate the presence (1) or absence (0) of each association across different samples.
 Bootstrap Sampling:
 The script performs bootstrap sampling to estimate the frequency of each association.
@@ -102,12 +106,3 @@ Conclusion
 This script is a powerful tool for analyzing protein-protein interactions in Alzheimer's Disease research. By leveraging bootstrap sampling and frequency analysis, it helps identify key protein associations that may play a role in the disease's pathology.
 can you give me an idea of what is a Gene regulatory network and protein-protein network for the introduccion of this readme?
 Fuentes
-
-
-Respuesta
-Introduction to Gene Regulatory Networks and Protein-Protein Networks
-Gene Regulatory Networks (GRNs)
-Gene Regulatory Networks (GRNs) are complex networks that depict the regulatory relationships between genes and the proteins they encode. These networks illustrate how genes interact with each other and with various molecular signals to control gene expression. In a GRN, nodes represent genes, while edges indicate regulatory interactions, such as activation or repression. Understanding GRNs is crucial for elucidating the mechanisms of cellular processes, development, and responses to environmental changes, as they play a significant role in determining the behavior of biological systems.
-Protein-Protein Networks (PPNs)
-Protein-Protein Networks (PPNs) focus on the interactions between proteins within a cell. These networks are essential for understanding cellular functions, as proteins often work together in complexes to perform biological tasks. In a PPN, nodes represent proteins, and edges denote physical or functional interactions between them. Analyzing PPNs helps researchers identify key protein interactions that contribute to various cellular processes, including signaling pathways, metabolic processes, and disease mechanisms. By studying these networks, scientists can uncover insights into how proteins collaborate to maintain cellular homeostasis and how disruptions in these interactions can lead to diseases such as cancer and neurodegenerative disorders.
-Together, GRNs and PPNs provide a comprehensive framework for understanding the intricate web of interactions that govern cellular behavior and contribute to the complexity of biological systems.
