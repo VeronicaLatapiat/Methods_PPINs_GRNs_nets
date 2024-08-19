@@ -66,10 +66,6 @@ The script generates the following output files:
 - asociaciones_significativas_fdr.csv: Lists significant associations after applying FDR correction.
 - asociaciones_significativas_fdr-CHIsquare.csv: Contains significant associations with chi-square statistics and corrected p-values.
 
-Conclusion
-
-This script provides a comprehensive analysis of protein associations in a dataset of carriers and non-carriers, utilizing statistical methods to identify significant differences. It is a valuable tool for researchers studying the implications of protein interactions in health and disease.
-
 ```
 PPNs.py
 ```
